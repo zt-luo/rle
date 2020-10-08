@@ -62,9 +62,8 @@ def zero_rle_decompress(data_in, out_len):
 
         cur_in += 1
 
-    if cur_in != out_len:
-        # raise "decompress len mismatch"
-        pass
+    if cur_out != out_len:
+        raise RuntimeError("decompress len mismatch")
 
     return data_out.getvalue()
 

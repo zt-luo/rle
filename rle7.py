@@ -92,7 +92,7 @@ def rle7_decompress(data_in, out_len):
             cur_in += 1
 
     if cur_out != out_len:
-        print('decompress len mismatch')
+        raise RuntimeError("decompress len mismatch")
 
     return data_out.getvalue()
 
